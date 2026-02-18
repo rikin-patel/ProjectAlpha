@@ -1,0 +1,4 @@
+.venv
+src/data/train/**
+src/data/test/**
+src/data/val/**

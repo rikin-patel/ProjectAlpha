@@ -1,0 +1,34 @@
+# ======= Data =======
+data_dir: 'data/'
+img_size: 224
+num_workers: 4
+
+# ======= Classes =======
+num_classes: 2
+class_names:
+  - 'violence'
+  - 'non-violence'
+
+# ======= Model =======
+model_name: 'resnet18' # resnet18, resnet50, efficientnet_b0
+pretrained: true
+
+# ======= Training =======
+batch_size: 32
+learning_rate: 0.001
+weight_decay: 1e-4
+epochs: 50
+seed: 42
+
+# ======= Scheduler =======
+scheduler: 'cosine' # step, cosine, none
+step_size: 10 # for step scheduler
+gamma: 0.1 # for step scheduler
+
+# ======= Early Stopping =======
+early_stopping_patience: 5
+
+# ======= Paths =======
+model_save_path: 'checkpoints/best_model.pth'
+export_onnx_path: 'checkpoints/model.onnx'
+log_dir: 'logs/'
