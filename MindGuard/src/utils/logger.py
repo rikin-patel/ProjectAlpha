@@ -18,7 +18,7 @@ def setup_logger(name: str, log_dir: str = 'logs', log_level: int = logging.INFO
     if not os.path.exists(log_dir):
         os.makedirs(log_dir, exist_ok=True)
 
-    logger = logging.getLoggger(name)
+    logger = logging.getLogger(name)
     if logger.handlers:
         # Logger already configured
         return logger
