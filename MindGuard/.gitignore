@@ -4,4 +4,7 @@ src/data/test/**
 src/data/val/**
 **/__pycache__/
 **/logs/**
+checkpoints/
+*.pth
+*.onnx
 

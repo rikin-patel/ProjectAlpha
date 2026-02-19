@@ -28,7 +28,11 @@ def setup_logger(name: str, log_dir: str = 'logs', log_level: int = logging.INFO
     # Create handlers
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
     c_handler = logging.StreamHandler(sys.stdout)
-    f_handler = logging.FileHandler(os.path.join(log_dir, f'{name}_{timestamp}.log'))
+    f_handler = logging.FileHandler(
+        os.path.join(log_dir, f'{name}_{timestamp}.log'),
+        delay=True,
+        encoding='utf-8'
+    )
 
     c_handler.setLevel(log_level)
     f_handler.setLevel(log_level)
